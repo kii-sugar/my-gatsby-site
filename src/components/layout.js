@@ -10,7 +10,7 @@ import {
 } from './layout.module.css'
 
 const Layout = ({ pageTitle, children}) => {
-  // ほしいリソースを指定
+  // ほしいリソースを指定 ビルディングブロックコンポーネントにプルするにはuseStateicQueryフック使用
   const data = useStaticQuery(graphql`
     query {
       site {
