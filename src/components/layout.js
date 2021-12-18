@@ -1,13 +1,12 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import '../styles/global.css'
+import { useStaticQuery, graphql } from 'gatsby'
 import { 
   container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
   siteTitle
 } from './layout.module.css'
+import NavBar from "./navbar"
+import Footer from "./footer"
 
 const Layout = ({ pageTitle, children}) => {
   // ほしいリソースを指定 ビルディングブロックコンポーネントにプルするにはuseStateicQueryフック使用
@@ -24,23 +23,12 @@ const Layout = ({ pageTitle, children}) => {
     <div className={container}>
       <title>{ pageTitle }|{ data.site.siteMetadata.title }</title>
       <header className={siteTitle}>{ data.site.siteMetadata.title }</header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>Home</Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>About</Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>Blog</Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <h1 className={heading}>{ pageTitle }</h1>
+      <NavBar />
+      <main class="pt-4">
+        <h1 class="my-4 text-3xl text-blue-500/70 font-semibold">{ pageTitle }</h1>
         { children }
       </main>
+      <Footer />
     </div>
   )
 }
