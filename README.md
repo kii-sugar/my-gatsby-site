@@ -7,6 +7,8 @@
   Gatsby minimal starter
 </h1>
 
+## This site is running https://mygatsbysite42005.gatsbyjs.io/
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
