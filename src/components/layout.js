@@ -7,7 +7,7 @@ import {
 } from './layout.module.css'
 import NavBar from "./navbar"
 import Footer from "./footer"
-
+// TO DO: 画像の最適化 ナビバーの選択中デザイン
 const Layout = ({ pageTitle, children}) => {
   // ほしいリソースを指定 ビルディングブロックコンポーネントにプルするにはuseStateicQueryフック使用
   const data = useStaticQuery(graphql`
